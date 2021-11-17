@@ -1,0 +1,295 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    overflow-x: hidden;
+
+}
+
+/* formulario Login */
+
+.form-login {
+    width: 100%;
+    height: 100vh;
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form {
+    width: 400px;
+    height: 70vh;
+    padding: 20px 30px;
+    background-color: #fff;
+    border-radius: 12px;
+    border: 1px solid #00669F;
+    box-shadow: 0 0 12px 6px #00669F;
+}
+
+
+.cabecera-form h1 {
+    color: #333333;
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.login-img {
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    left: calc(50% - 40px);
+    top: 240px;
+}
+
+.form .grupo {
+    position: relative;
+    margin: 40px;
+}
+
+.input {
+    background: none;
+    color: #333333;
+    font-size: 18px;
+    padding: 10px 10px 5px;
+    display: block;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #00669F;
+}
+
+.input:focus {
+    /* quita el recuadro donde va el input */
+    outline: none;
+    color: #333333;
+}
+
+.label {
+    color: #00669F;
+    font-size: 16px;
+    font-weight: bold;
+    position: absolute;
+    left: 5px;
+    top: 10px;
+    transition: 0.7s ease all;
+    pointer-events: none;
+    white-space: nowrap;
+}
+
+/* input:valid para que no se superpongan los textos del label */
+input:focus~label,
+input:valid~label {
+    top: -15px;
+    font-size: 12px;
+    color: #1b2f62;
+}
+
+.barra {
+    position: relative;
+    display: block;
+    width: 100%;
+}
+
+/* efecto de barra cargando del label */
+.barra::before {
+    content: "";
+    height: 2px;
+    width: 0%;
+    bottom: 0%;
+    position: absolute;
+    background: linear-gradient(to top, hsla(213, 44%, 29%, 0.638), #00669F);
+    transition: 0.5s ease width;
+    left: 0%;
+}
+
+
+.input:focus~.barra::before {
+    width: 100%;
+}
+
+.button {
+    font-family: 'Roboto', sans-serif;
+    background: #1CD1B0;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, hsla(213, 44%, 29%, 0.638), #1CD1B0);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, hsla(213, 44%, 29%, 0.638), #1CD1B0);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    border: none;
+    display: block;
+    width: 100%;
+    margin: 40px auto 10px;
+    color: #ffff;
+    height: 40px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 50px;
+}
+
+.registrarse-link {
+    display: inline-block;
+    text-decoration: none;
+    font-size: 15px;
+    text-align: center;
+    color: #00669F;
+    margin-left: 5px;
+
+
+}
+
+.registrarse-link span {
+    color: #333333;
+    margin-left: 5px;
+}
+
+
+
+
+
+
+/* FORMULARIO DE REGISTRO */
+
+.form-register {
+    width: 100%;
+    height: 120vh;
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.registro-box{
+    width: 400px;
+    height: 90vh;
+    padding: 20px 30px;
+    background-color: #fff;
+    border-radius: 12px;
+    border: 1px solid #00669F;
+    box-shadow: 0 0 12px 6px #00669F;
+
+}
+
+
+.registro-box .grupo {
+    position: relative;
+    margin: 40px;
+}
+
+.select-country{
+    outline: none;
+    background: none;
+    color: #333333;
+    font-size: 18px;
+    padding: 10px 10px 5px;
+    display: block;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #00669F;
+
+}
+
+
+
+.buttons-register{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.button-register{
+    font-family: 'Roboto', sans-serif;
+    background: #1CD1B0;
+    background: linear-gradient(to top, hsla(213, 44%, 29%, 0.638), #1CD1B0);
+    border: none;
+    display: block;
+    width: 45%;
+    margin: 10px auto 10px;
+    color: #ffff;
+    height: 40px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 50px;
+
+}
+
+.button-reset{
+    font-family: 'Roboto', sans-serif;
+    background: #888888;
+    background: linear-gradient(to top, hsla(213, 44%, 29%, 0.638), #888888);
+    border: none;
+    display: block;
+    width: 45%;
+    margin: 10px auto 10px;
+    color: #ffff;
+    height: 40px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 50px;
+
+}
+
+
+/* FORMULARIO DE CONTACTO */
+
+
+.form-contac {
+    width: 100%;
+    height: 120vh;
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contac-box{
+    width: 400px;
+    height: 90vh;
+    padding: 20px 30px;
+    background-color: #fff;
+    border-radius: 12px;
+    border: 1px solid #00669F;
+    box-shadow: 0 0 12px 6px #00669F;
+}
+
+
+.contac-box .grupo {
+    position: relative;
+    margin: 40px;
+}
+
+.form-control{
+    width: 100%;
+    height: 200px;
+    color: #333333;
+    font-size: 14px;
+    padding: 10px 10px 5px;
+    display: block;
+    width: 100%;
+    border: 1px solid #00669F;
+    outline: none;
+    color: #333333;
+}
+
+.buttons-contac{
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: -20px;
+}
+
+.grupo-box{
+    position: relative;
+    margin: 5px 40px;
+}
+
+.grupo-buttons{
+    position: relative;
+    margin: 5px 40px;
+}
